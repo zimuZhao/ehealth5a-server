@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.DataTemperatureMapper">
+    <!-- 创建体温记录 (Create) -->
+    <insert id="addTemperature" parameterType="DataTemperature">
+       INSERT INTO t_data_temperature ( temperatureID , associateID , measureTime , temperature , upload , RES , creatTime , describtion , deleteFlag ) VALUES ( #{temperatureID} , #{associateID} , #{measureTime} , #{temperature} , #{upload} , #{rES} , #{creatTime} , #{describtion} , #{deleteFlag} )
+    </insert>
+
+</mapper>

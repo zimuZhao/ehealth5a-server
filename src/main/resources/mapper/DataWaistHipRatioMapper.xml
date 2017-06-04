@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.DataWaistHipRatioMapper">
+    <!-- 创建腰臀比记录 (Create) -->
+    <insert id="addWaistHipRatio" parameterType="DataWaistHipRatio">
+        INSERT INTO t_data_waist_hip_ratio ( whrID , associateID , measureTime , waist , hip , upload , RES , creatTime , describtion , deleteFlag ) VALUES ( #{whrID} , #{associateID} , #{measureTime} , #{waist} , #{hip} , #{upload} , #{rES} , #{creatTime} , #{describtion} , #{deleteFlag} )
+    </insert>
+
+</mapper>

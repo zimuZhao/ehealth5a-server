@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.UserAssociateDevice">
+    <!-- 创建用户记录 (Create) -->
+    <insert id="insertUserAssociateDevice" parameterType="UserAssociateDevice">
+        INSERT INTO t_user_associate_device ( associateID , userID , deviceID ) SELECT #{associateID} , #{userID} , #{deviceID} FROM DUAL WHERE NOT EXISTS(SELECT * FROM t_user_associate_device WHERE userID =  #{userID} AND deviceID = #{deviceID})
+    </insert>
+
+    <!-- 查询用户-设备关联关系 -->
+    <select id="getAssociateID" parameterType="UserAssociateDevice" resultType="String">
+        SELECT associateID FROM t_user_associate_device WHERE userID=#{userID} AND deviceID = #{deviceID}
+    </select>
+
+</mapper>

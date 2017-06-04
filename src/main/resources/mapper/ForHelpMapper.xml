@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.ForHelpMapper">
+    <!-- 创建求助记录 (Create) -->
+    <insert id="addForHelp" parameterType="ForHelp">
+        INSERT INTO t_for_help ( helpID , associateID , helpTime , upload , solveTime , RES , describtion , deleteFlag ) VALUES ( #{helpID} , #{associateID} , #{helpTime} , #{upload} , #{solveTime} , #{rES} , #{describtion} , #{deleteFlag} )
+    </insert>
+
+</mapper>

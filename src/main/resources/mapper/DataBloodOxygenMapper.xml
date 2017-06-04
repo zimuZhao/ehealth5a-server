@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.DataBloodOxygenMapper">
+    <!-- 创建血氧记录 (Create) -->
+    <insert id="addBloodOxygen" parameterType="DataBloodOxygen">
+        INSERT INTO t_data_blood_oxygen ( bloodOxygenID , associateID , measureTime , SPO2 , PR , upload , RES1 , RES2 , creatTime , describtion , deleteFlag ) VALUES ( #{bloodOxygenID} , #{associateID} , #{measureTime} , #{sPO2} , #{pR} , #{upload} , #{rES1} , #{rES2} , #{creatTime} , #{describtion} , #{deleteFlag} )
+     </insert>
+
+</mapper>

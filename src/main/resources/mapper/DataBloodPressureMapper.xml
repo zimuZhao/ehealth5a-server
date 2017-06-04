@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.DataBloodPressureMapper">
+    <!-- 创建无创血压记录 (Create) -->
+    <insert id="addBloodPressure" parameterType="DataBloodPressure">
+        INSERT INTO t_data_blood_pressure ( nibpID , associateID , measureTime , Sys , Dia , ABI , ABIFlag , PR , upload , RES , creatTime , describtion , deleteFlag ) VALUES ( #{nibpID} , #{associateID} , #{measureTime} , #{sys} , #{dia} , #{aBI} , #{aBIFlag} , #{pR} , #{upload} , #{rES} , #{creatTime} , #{describtion} , #{deleteFlag} )
+    </insert>
+
+</mapper>

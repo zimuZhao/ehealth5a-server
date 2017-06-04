@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.DataCholMapper">
+    <!-- 创建总胆固醇记录 (Create) -->
+    <insert id="addChol" parameterType="DataChol">
+        INSERT INTO t_data_chol ( cholID , associateID , measureTime , CHOL , upload , RES , creatTime , describtion , deleteFlag ) VALUES ( #{cholID} , #{associateID} , #{measureTime} , #{cHOL} , #{upload} , #{rES} , #{creatTime} , #{describtion} , #{deleteFlag} )
+    </insert>
+
+</mapper>

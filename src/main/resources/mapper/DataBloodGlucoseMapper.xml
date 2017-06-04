@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.DataBloodGlucoseMapper">
+    <!-- 创建血糖记录 (Create) -->
+    <insert id="addBloodGlucose" parameterType="DataBloodGlucose">
+        INSERT INTO t_data_blood_glucose ( bloodGlucoseID , associateID , measureTime , GLU , flag , upload , RES , creatTime , describtion , deleteFlag ) VALUES ( #{bloodGlucoseID} , #{associateID} , #{measureTime} , #{gLU} , #{flag} , #{upload} , #{rES} , #{creatTime} , #{describtion} , #{deleteFlag} )
+    </insert>
+
+</mapper>

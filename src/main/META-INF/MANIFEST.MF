@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: frameServer.jar
+Main-Class: com.frameDemo.app.FrameServerApp
+

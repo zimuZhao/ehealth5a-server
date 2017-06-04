@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.DeviceMapper">
+    <!-- 创建设备记录 (Create) -->
+    <insert id="insertDevice" parameterType="Device">
+        INSERT INTO  t_device ( deviceID , deviceName , deviceType , protocolVersion , creatTime , description , deleteFlag ) SELECT #{deviceID} , #{deviceName} , #{deviceType} , #{protocolVersion} , #{creatTime} , #{description} , #{deleteFlag} FROM DUAL WHERE NOT EXISTS(SELECT deviceID FROM t_device WHERE deviceID =  #{deviceID} )
+    </insert>
+
+</mapper>
